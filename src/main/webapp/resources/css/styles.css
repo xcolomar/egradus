@@ -1,0 +1,135 @@
+/*
+ * Capçalera de la vista index
+ */
+.navbar-default {background-color: #006699;}
+
+/*
+ * Els elements de la capçalera que no siguin enllaços tenen la mateixa
+ * posició centrada que aquests.
+ */
+.capcalera-item {color: #999; position: relative; display: block; padding: 10px 15px; padding-top: 15px;}
+
+/*
+ * color de la lletra a tots els enllaços d'egradus
+ */
+a {color: #006699;}
+
+/*
+ * hover i focus (quan passam per damunt i quan clicam respectivament) per les assignatures del panell 
+ * lateral i per les pestanyes del material (fòrum, correcció, repositori, etc)
+ */
+.nav>li>a:hover {text-decoration: #ECECEC; background-color: #ECECEC;}
+.nav>li>a:focus {text-decoration: #BDD2EB; background-color: #BDD2EB;}
+
+/*
+ * padding per als divs on s'acumulen les preguntes o qüestionaris pendents de contestar, contestats, pendents de
+ * corregir o corregides en el cas en que no hi ha per acumular, i simplement hem de donar un 
+ * missatge com ara: "no tens preguntes/qüestionaris pendents per contestar". Com que no és un enllaç, perd les
+ * propietats entre elles, el desplaçament respecte del div. Per això aplicam aquesta propietat.
+ */
+.pregunta-buit, .questionari-buit {padding: 10px 15px;}
+
+/*
+ * Vistes del panell central (crea, cerca i consulta descripció i material d'assignatures)
+ * i el div que conté el codi d'assignatura per a que les diferents vistes de material en
+ * puguin fer-ne ús.
+ */
+.central, #materialCodiAssignatura {display: none;}
+
+/*
+ * Vista del panell central que mostra una petita descripció quan l'usuari fa login
+ */
+#centralDefault {display:inline;}
+
+/*
+ * color que prèn una assignatura del panell lateral quan està seleccionada
+ */
+.egradus-color-llista {background-color: #BDD2EB;}
+
+/*
+ * color que prèn una pestanya quan està seleccionada (de les que hi ha per una assignatura) 
+ */
+.egradus-color-pestanya {background-color: #BDD2EB;}
+
+/*
+ * Descripció d'assignatura i de pregunta.
+ * Si no llevam el width que s'assigna per defecte, surt text més a la dreta de lo que la 
+ * pantalla pot veure (i surt un scroll horitzontal per a poder veure aquesta part de la pàgina).
+ * per tal d'evitar-ho, posam un width automàtic.
+ * A part, afegim un espai abaix de cada camp (padding-bottom) 
+ */
+fieldset.scheduler-border > div.container {width: auto; padding-bottom: 15px;}
+
+.padding-chbx-rdb-30 {padding-top: 30px;}
+.padding-chbx-rdb-20 {padding-top: 20px;}
+.padding-chbx-rdb-10 {padding-top: 10px;}
+
+.hover-chbx:hover {background-color: #ECECEC;}
+
+/*
+ * Aquesta classe s'assigna quan l'alumne està contestant la pregunta
+ */
+.egradus-opcio-marcada {background-color: #BDD2EB;}
+
+.egradus-pregunta-marcada {background-color: #BDD2EB;}
+/*
+ * Aquestes classes s'assignen quan l'alumne consulta la pregunta que ha contestat prèviament
+ */
+.egradus-opcio-contestada-fallada     {background-color: #CC3333; color: #FFFFFF;}
+.egradus-opcio-contestada-acertada    {background-color: #33CC66;}
+.egradus-opcio-no-contestada-fallada  {background-color: #FFFFFF;}
+.egradus-opcio-no-contestada-acertada {background-color: #FFFFFF;}
+.egradus-opcio-correcta				  {color: #33CC66;}
+.egradus-opcio-incorrecta			  {color: #CC3333;}
+
+/*
+ * Quan col·locam dos botons un devora l'altre, aquesta classe marca una petita separació entre ells.
+ * NOTA: El botó que l'ha de contenir és el de la dreta (o, si n'hi ha més de dos, tots excepte el
+ * de l'esquerra de tot).
+ */
+.egradus-separacio-horitz-botons {margin-left: 5px;}
+
+/*
+ * Grandària de lletra de la informació associada de la pregunta
+ */
+.egradus-info-associada {font-size: 12px;}
+
+/*
+ * Grandària de lletra de la informació principal de la pregunta
+ */
+.egradus-grandaria-pregunta {font-size: 16px;}
+
+/*
+ * Per a alineaments centrats verticalment
+ */
+.egradus-vertical-align {display: inline-block; vertical-align: middle; float: none;}
+.egradus-vertical-align-40 {display: inline-block; vertical-align: 40%; float: none;}
+.egradus-vertical-align-30 {display: inline-block; vertical-align: 30%; float: none;}
+
+/*
+ * Color de lletra pel missatge "pregunta afegida", quan cercam preguntes per afegir i ja han sigut afegides
+ */
+p.egradus-pregunta-afegida {color: #CC3333;}
+
+/*
+ * Color de fons per a les preguntes que ja han sigut afegides al qüestionari i que no s'han de
+ * poder tornar a seleccionar
+ */
+.egradus-pregunta-afegida {background-color: #D8A3C0;}
+
+/*
+ * els caption de les taules apareixen abaix de la taula
+ */
+caption {caption-side: bottom; margin-top: 10px; font-size: 14;}
+
+/*
+ * estil per als titols dins les vistes de les estadístiques
+ */
+.estadistiques-titol {background-color:#8DA2BB; color: white; margin-bottom:10px; margin-top:40px; padding:5px;}
+
+/*
+ * desplaçament del label 'llegenda' per a que estigui alineat amb el panel de la llegenda (degut
+ * al col-xx-xx de bootstrap, que aplica un padding-left de 15 pixels per defecte).
+ */
+.legend-padding {padding-left:15px;}
+
