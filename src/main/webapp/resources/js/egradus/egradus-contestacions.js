@@ -62,7 +62,7 @@ function preguntesPendentsDeContestar(codiAssignatura) {
         		preguntes.each(function(){
         			var codiRp   = $(this).attr("codi");
         			var anonima  = $(this).attr("anonima");
-        			var dataAlta = new Date($(this).attr("dataAlta"));
+        			var dataAlta = dataTextualNavegador($(this).attr("dataAlta"));
 	        		var codi     = $(this).find("pregunta").attr("codi");
 	                var enunciat = $(this).find("pregunta").attr("enunciat");
 	                var tipus    = $(this).find("pregunta").attr("tipus");
@@ -145,7 +145,7 @@ function preguntesPendentsDeSerCorregides(codiAssignatura) {
         		preguntes.each(function(){
         			var codiRp   = $(this).attr("codi");
         			var anonima  = $(this).attr("anonima");
-        			var dataCnt  = new Date($(this).attr("dataContestacioFi"));
+        			var dataCnt  = dataTextualNavegador($(this).attr("dataContestacioFi"));
 	        		var codi     = $(this).find("pregunta").attr("codi");
 	                var enunciat = $(this).find("pregunta").attr("enunciat");
 	                var tipus    = $(this).find("pregunta").attr("tipus");
@@ -228,7 +228,7 @@ function preguntesPendentsDeSerRevisades(codiAssignatura) {
         		preguntes.each(function(){
         			var codiRp   = $(this).attr("codi");
         			var anonima  = $(this).attr("anonima");
-        			var dataCrr  = new Date($(this).attr("dataCorreccio"));
+        			var dataCrr  = dataTextualNavegador($(this).attr("dataCorreccio"));
 	        		var codi     = $(this).find("pregunta").attr("codi");
 	                var enunciat = $(this).find("pregunta").attr("enunciat");
 	                var tipus    = $(this).find("pregunta").attr("tipus");
@@ -314,8 +314,8 @@ function preguntesContestades(codiAssignatura) {
         		preguntes.each(function(){
         			var codiRp   = $(this).attr("codi");
         			var anonima  = $(this).attr("anonima");
-        			var dataCrr  = new Date($(this).attr("dataCorreccio"));
-	                var dataRev  = new Date($(this).attr("dataRevisio"));
+        			var dataCrr  = dataTextualNavegador($(this).attr("dataCorreccio"));
+	                var dataRev  = dataTextualNavegador($(this).attr("dataRevisio"));
 	        		var codi     = $(this).find("pregunta").attr("codi");
 	                var enunciat = $(this).find("pregunta").attr("enunciat");
 	                var tipus    = $(this).find("pregunta").attr("tipus");
@@ -431,8 +431,8 @@ function mostraRespostaPreguntaContestada(codiRespostaPregunta, esAlumne) {
         	var aluAlies     = $(xml).find("alumne").attr("alies");
         	var alumne       = aluAlies + " (" + aluNom + " " + aluLli1 + " " + aluLli2 + ")";
         	
-        	var dataInici = new Date(rspDataInici);
-        	var dataFi = new Date(rspDataFi);
+        	var dataInici = dataTextualNavegador(rspDataInici);
+        	var dataFi = dataTextualNavegador(rspDataFi);
         	
         	$("#consultarRespostaEnunciat").html(preEnunciat);
         	$("#consultarRespostaDataInici").html("<div class=\"col-lg-12\"><b>" + MIS_PRE_CONS_RESPOSTA_DATFIN + ": </b>" + formatData(dataFi) + "</div>");
@@ -460,7 +460,7 @@ function mostraRespostaPreguntaContestada(codiRespostaPregunta, esAlumne) {
         	
         	// Data de correcció (en cas que s'hagi corregit)
         	if (rspDataCrr.length > 0) {
-        		var dataCrr = new Date(rspDataCrr);
+        		var dataCrr = dataTextualNavegador(rspDataCrr);
         		var textRespostaDataCorreccio = "<div class=\"col-lg-12\"><b>" + MIS_PRE_CONS_RESPOSTA_CORREGIDA + ": </b>" + formatData(dataCrr);
         		// si la pregunta NO és REC, indicarem que es tracta d'una correcció automàtica
         		if (preTipus != TIPUS_PREGUNTA_REC) textRespostaDataCorreccio += " <i>(" + MIS_PRE_CONS_CRR_AUTOMATICA + ")</i>";
@@ -495,7 +495,7 @@ function mostraRespostaPreguntaContestada(codiRespostaPregunta, esAlumne) {
         	
         	// Data de revisió (en cas que s'hagi revisat)
         	if (rspDataRev.length > 0) {
-        		var dataRev = new Date(rspDataRev);
+        		var dataRev = dataTextualNavegador(rspDataRev);
         		var textRespostaDataRevisio = "<div class=\"col-lg-12\"><b>" + MIS_PRE_CONS_RESPOSTA_REVISADA + ": </b>" + formatData(dataRev);
         		textRespostaDataRevisio += "</div>";
         		$("#consultarRespostaDataRevisio").html(textRespostaDataRevisio);
@@ -671,7 +671,7 @@ function questionarisPendentsDeContestar(codiAssignatura) {
         		questionaris.each(function(){
         			var codiRq     = $(this).attr("codi");
         			var anonim     = $(this).attr("anonim");
-        			var dataAlta   = new Date($(this).attr("dataAlta"));
+        			var dataAlta   = dataTextualNavegador($(this).attr("dataAlta"));
 	        		var codi       = $(this).find("questionari").attr("codi");
 	                var nom        = $(this).find("questionari").attr("nom");
 	                var descripcio = $(this).find("questionari").attr("descripcio");
@@ -749,7 +749,7 @@ function questionarisPendentsDeSerCorregits(codiAssignatura) {
         		questionaris.each(function(){
         			var codiRq     = $(this).attr("codi");
         			var anonim     = $(this).attr("anonim");
-        			var dataCnt    = new Date($(this).attr("dataContestacioFi"));
+        			var dataCnt    = dataTextualNavegador($(this).attr("dataContestacioFi"));
 	        		var codi       = $(this).find("questionari").attr("codi");
 	                var nom        = $(this).find("questionari").attr("nom");
 	                var descripcio = $(this).find("questionari").attr("descripcio");
@@ -829,7 +829,7 @@ function questionarisPendentsDeSerRevisats(codiAssignatura) {
         		questionaris.each(function(){
         			var codiRq     = $(this).attr("codi");
         			var anonim     = $(this).attr("anonim");
-        			var dataCrr    = new Date($(this).attr("dataCorreccio"));
+        			var dataCrr    = dataTextualNavegador($(this).attr("dataCorreccio"));
 	        		var codi       = $(this).find("questionari").attr("codi");
 	                var nom        = $(this).find("questionari").attr("nom");
 	                var descripcio = $(this).find("questionari").attr("descripcio");
@@ -912,8 +912,8 @@ function questionarisContestats(codiAssignatura) {
         		questionaris.each(function(){
         			var codiRq     = $(this).attr("codi");
         			var anonim     = $(this).attr("anonim");
-        			var dataCrr    = new Date($(this).attr("dataCorreccio"));
-	                var dataRev    = new Date($(this).attr("dataRevisio"));
+        			var dataCrr    = dataTextualNavegador($(this).attr("dataCorreccio"));
+	                var dataRev    = dataTextualNavegador($(this).attr("dataRevisio"));
 	        		var codi       = $(this).find("questionari").attr("codi");
 	                var nom        = $(this).find("questionari").attr("nom");
 	                var descripcio = $(this).find("questionari").attr("descripcio");
@@ -1061,10 +1061,10 @@ function mostraRespostaQuestionariContestat(codiRespostaQuestionari, esAlumne) {
         	var aluAlies     = $(xml).find("alumne").attr("alies");
         	var alumne       = aluAlies + " (" + aluNom + " " + aluLli1 + " " + aluLli2 + ")";
         	
-        	var dataInici = new Date(rspDataInici);
-        	var dataFi = new Date(rspDataFi);
-        	var dataCrr = new Date(rspDataCrr);
-        	var dataRev = new Date(rspDataRev);
+        	var dataInici = dataTextualNavegador(rspDataInici);
+        	var dataFi = dataTextualNavegador(rspDataFi);
+        	var dataCrr = dataTextualNavegador(rspDataCrr);
+        	var dataRev = dataTextualNavegador(rspDataRev);
         	
         	$("#consultarRespostaQuestionariNom").html(qstNom + "<br />" + qstDescrip);
         	$("#consultarRespostaQuestionariDataInici").html("<div class=\"col-lg-12\"><b>" + MIS_QST_CONS_RESPOSTA_DATFIN + ": </b>" + formatData(dataFi) + "</div>");
@@ -1432,7 +1432,7 @@ function iniciaContestacioPregunta(codiRespostaPregunta) {
 //        	var asiLli1 	 = $(xml).find("assignador").attr("llinatge1");
 //        	var asiLli2 	 = $(xml).find("assignador").attr("llinatge2");
         	
-        	var dataInici = new Date(rspDataInici);
+        	var dataInici = dataTextualNavegador(rspDataInici);
         	
         	$("#contestarPreguntaEnunciat").html(preEnunciat);
         	$("#contestarPreguntaDataInici").html(MIS_PRE_INI_CNT_DATA + ": " + formatData(dataInici));

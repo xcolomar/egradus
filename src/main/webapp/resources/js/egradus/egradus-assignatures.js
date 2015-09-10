@@ -337,7 +337,7 @@ function ompleDescripcio(xml) {
 	var codRefAss   = $(xml).find("assignatura").attr("codiReferencia");
 	var assnom      = $(xml).find("assignatura").attr("nom");
 	var anyAca      = $(xml).find("assignatura").attr("anyAcademic");
-	var datalt      = new Date($(xml).find("assignatura").attr("dataAlta"));
+	var datalt      = dataTextualNavegador($(xml).find("assignatura").attr("dataAlta"));
 	var descripcio  = $(xml).find("descripcio");
 	var crenom      = $(xml).find("creador").attr("nom");
 	var crelli1     = $(xml).find("creador").attr("llinatge1");

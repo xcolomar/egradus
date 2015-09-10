@@ -174,3 +174,18 @@ function decimalArrodonit(num, numDecimals) {
 	var d = Math.pow(10, numDecimals);
 	return Math.round(num * d) / d;
 }
+
+/**
+ * Funció que realitza la conversió de format i tipus d'una data
+ * per a poder ser compatible en els navegadors Chrome, Firefox 
+ * i IE7+
+ * 
+ * @param data
+ * 			data tipus String en format yyyy-mm-dd hh:mm:ss.0 
+ * 			(el darrer dígit per a les dècimes de segon)
+ * @return data tipus Date() i en format yyyy/mm/dd hh:mm:ss
+ * 			(sense dígit per a les dècimes de segon)
+ */
+function dataTextualNavegador(data) {
+	return new Date(data.replace(/\-/g,'\/').replace(/\.[0-9]/g, ''));
+}

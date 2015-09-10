@@ -605,7 +605,7 @@ function omplirRepositoriPreguntes(xml) {
     	var codi     = $(this).attr("codi");
         var enunciat = $(this).attr("enunciat");
         var tipus    = $(this).attr("tipus");
-        var dataalta = new Date($(this).attr("dataAlta"));
+        var dataalta = dataTextualNavegador($(this).attr("dataAlta"));
         var rr       = $(this).attr("raonarResposta");
         var estat    = $(this).attr("estat");
         var dt       = $(this).attr("dificultatTeorica");
@@ -1098,7 +1098,7 @@ function omplirRepositoriQuestionaris(xml) {
     	var codi     = $(this).attr("codi");
         var nom      = $(this).attr("nom");
         var descrip  = $(this).attr("descripcio");
-        var dataalta = new Date($(this).attr("dataAlta"));
+        var dataalta = dataTextualNavegador($(this).attr("dataAlta"));
         var estat    = $(this).attr("estat");
         var dt       = $(this).attr("dificultatTeorica");
         var dp       = $(this).attr("dificultatPractica");
@@ -1281,7 +1281,7 @@ function habilitaModificacioQuestionari(codi) {
                 var rr          = $(this).attr("raonarResposta");
 	        	var tipus       = $(this).attr("tipus");
 	        	var pes         = $(this).attr("pes");
-	            var dataAlta    = new Date($(this).attr("dataAlta"));
+	            var dataAlta    = dataTextualNavegador($(this).attr("dataAlta"));
 	            var creadorNom  = $(this).find("creador").attr("nom");
 	            var creadorLli1 = $(this).find("creador").attr("llinatge1");
 	            var creadorLli2 = $(this).find("creador").attr("llinatge2");
@@ -1531,7 +1531,7 @@ function afegirPreguntes(prefix) {
 function afegirPregunta(xml, prefix, codiPregunta) {
 	var enunciat = $(xml).find("pregunta").attr("enunciat");
 	var tipus    = $(xml).find("pregunta").attr("tipus");
-    var dataAlta = new Date($(xml).find("pregunta").attr("dataAlta"));
+    var dataAlta = dataTextualNavegador($(xml).find("pregunta").attr("dataAlta"));
     var rr       = $(xml).find("pregunta").attr("raonarResposta");
     var dt       = $(xml).find("pregunta").attr("dificultatTeorica");
     var dp       = $(xml).find("pregunta").attr("dificultatPractica");
@@ -1670,7 +1670,7 @@ function omplirResultatCercaPreguntaDinsCreaQuestionari(xml, prefix) {
     	var codi     = $(this).attr("codi");
         var enunciat = $(this).attr("enunciat");
         var tipus    = $(this).attr("tipus");
-        var dataAlta = new Date($(this).attr("dataAlta"));
+        var dataAlta = dataTextualNavegador($(this).attr("dataAlta"));
         var rr       = $(this).attr("raonarResposta");
         var dt       = $(this).attr("dificultatTeorica");
         var dp       = $(this).attr("dificultatPractica");

@@ -374,8 +374,8 @@ function estadistiquesPreguntesAlumne(xml, id) {
 	    	var codi         = $(this).find("pregunta").attr("codi");
 	        var enunciat     = $(this).find("pregunta").attr("enunciat");
 	        var tipus        = $(this).find("pregunta").attr("tipus");
-	        var datacntfin   = new Date($(this).find("dates").attr("dataContestacioFi"));
-	        var datacrr      = new Date($(this).find("dates").attr("dataCorreccio"));
+	        var datacntfin   = dataTextualNavegador($(this).find("dates").attr("dataContestacioFi"));
+	        var datacrr      = dataTextualNavegador($(this).find("dates").attr("dataCorreccio"));
 	        var nota         = $(this).find("nota").attr("nota");
 	        var notaMitjaAss = $(this).find("nota").attr("mitjaAssignatura");
 	        var notaMitjaEgr = $(this).find("nota").attr("mitjaEgradus");
@@ -700,8 +700,8 @@ function estadistiquesQuestionarisAlumne(xml, id) {
 			var codi         = $(this).find("questionari").attr("codi");
 	        var nom          = $(this).find("questionari").attr("nom");
 	        var descripcio   = $(this).find("questionari").attr("descripcio");
-	        var datacntfin   = new Date($(this).find("dates").attr("dataContestacioFi"));
-	        var datacrr      = new Date($(this).find("dates").attr("dataCorreccio"));
+	        var datacntfin   = dataTextualNavegador($(this).find("dates").attr("dataContestacioFi"));
+	        var datacrr      = dataTextualNavegador($(this).find("dates").attr("dataCorreccio"));
 	        var nota         = $(this).find("nota").attr("nota");
 	        var notaMitjaAss = $(this).find("nota").attr("mitjaAssignatura");
 	        var notaMitjaEgr = $(this).find("nota").attr("mitjaEgradus");

@@ -83,7 +83,7 @@ function preguntesPendentsDeCorregir(codiAssignatura) {
         		preguntes.each(function(){
         			var codiRp   = $(this).attr("codi");
         			var anonima  = $(this).attr("anonima");
-        			var dataCnt  = new Date($(this).attr("dataContestacioFi"));
+        			var dataCnt  = dataTextualNavegador($(this).attr("dataContestacioFi"));
 	        		var codi     = $(this).find("pregunta").attr("codi");
 	                var enunciat = $(this).find("pregunta").attr("enunciat");
 	                var tipus    = $(this).find("pregunta").attr("tipus");
@@ -167,8 +167,8 @@ function preguntesCorregides(codiAssignatura) {
         		preguntes.each(function(){
         			var codiRp   = $(this).attr("codi");
         			var anonima  = $(this).attr("anonima");
-        			var dataCrr  = new Date($(this).attr("dataCorreccio"));
-	                var dataRev  = new Date($(this).attr("dataRevisio"));
+        			var dataCrr  = dataTextualNavegador($(this).attr("dataCorreccio"));
+	                var dataRev  = dataTextualNavegador($(this).attr("dataRevisio"));
 	        		var codi     = $(this).find("pregunta").attr("codi");
 	                var enunciat = $(this).find("pregunta").attr("enunciat");
 	                var tipus    = $(this).find("pregunta").attr("tipus");
@@ -293,9 +293,9 @@ function iniciaCorreccioPregunta(codiRespostaPregunta) {
         	var aluAlies     = $(xml).find("alumne").attr("alies");
         	var alumne       = aluAlies + " (" + aluNom + " " + aluLli1 + " " + aluLli2 + ")";
         	
-        	var dataInici = new Date(rspDataInici);
-        	var dataFi = new Date(rspDataFi);
-        	var dataCrr = new Date(rspDataCrr);
+        	var dataInici = dataTextualNavegador(rspDataInici);
+        	var dataFi = dataTextualNavegador(rspDataFi);
+        	var dataCrr = dataTextualNavegador(rspDataCrr);
         	
         	// Si la resposta-pregunta és anònima, no hem de veure l'alumne
     		var divAnonimaOAlumne;
@@ -520,7 +520,7 @@ function questionarisPendentsDeCorregir(codiAssignatura) {
         		questionaris.each(function(){
         			var codiRq      = $(this).attr("codi");
         			var anonim     = $(this).attr("anonim");
-        			var dataCnt     = new Date($(this).attr("dataContestacioFi"));
+        			var dataCnt     = dataTextualNavegador($(this).attr("dataContestacioFi"));
 	        		var codi        = $(this).find("questionari").attr("codi");
 	                var nom         = $(this).find("questionari").attr("nom");
 	                var descripcio  = $(this).find("questionari").attr("descripcio");
@@ -598,8 +598,8 @@ function questionarisCorregits(codiAssignatura) {
         		questionaris.each(function(){
         			var codiRq      = $(this).attr("codi");
         			var anonim     = $(this).attr("anonim");
-        			var dataCrr    = new Date($(this).attr("dataCorreccio"));
-	                var dataRev    = new Date($(this).attr("dataRevisio"));
+        			var dataCrr    = dataTextualNavegador($(this).attr("dataCorreccio"));
+	                var dataRev    = dataTextualNavegador($(this).attr("dataRevisio"));
 	        		var codi        = $(this).find("questionari").attr("codi");
 	                var nom         = $(this).find("questionari").attr("nom");
 	                var descripcio  = $(this).find("questionari").attr("descripcio");
@@ -707,9 +707,9 @@ function iniciaCorreccioQuestionari(codiRespostaQuestionari) {
         	var aluAlies     = $(xml).find("alumne").attr("alies");
         	var alumne       = aluAlies + " (" + aluNom + " " + aluLli1 + " " + aluLli2 + ")";
         	
-        	var dataInici = new Date(rspDataInici);
-        	var dataFi = new Date(rspDataFi);
-        	var dataCrr = new Date(rspDataCrr);
+        	var dataInici = dataTextualNavegador(rspDataInici);
+        	var dataFi = dataTextualNavegador(rspDataFi);
+        	var dataCrr = dataTextualNavegador(rspDataCrr);
         	
         	// Si la resposta-questionari és anònim, no hem de veure l'alumne
     		var divAnonimOAlumne;
