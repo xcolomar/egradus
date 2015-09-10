@@ -4,8 +4,8 @@
 <fmt:setBundle basename="messages" var="missatge" />
 
 <div id="centralDefault" class="central">
-	<p>Missatge per defecte</p>
-	<p>En aquest moment, si l'usuari és nou, es veuran indicacions de com moure-se per EGRADUS. Si no és nou, es mostraran les novetats que té, (per exemple si li han assignat alguna pregunta o qüestionari)</p>
+	<p><fmt:message bundle="${missatge}" key="home.missatge.defecte"/></p>
+	<p><fmt:message bundle="${missatge}" key="home.missatge.defecte.desc"/></p>
 </div>
 
 <div id="centralDescripcioAssignatura" class="central">
