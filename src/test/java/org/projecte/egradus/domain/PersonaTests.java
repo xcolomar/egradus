@@ -12,7 +12,6 @@ import javax.validation.ValidatorFactory;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.projecte.egradus.domain.Persona;
 import org.projecte.egradus.utilities.UtilTest;
 
 public class PersonaTests {
