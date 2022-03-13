@@ -31,7 +31,7 @@ public class JPAProfessorDaoTests {
 	private PersonaDao personaDao;
 
 	@Autowired
-	private AssignaturaDao assignaturaDao;
+	private AssignaturaRepository assignaturaDao;
 
 	private static String ASS_NOM = "Estadística III";
 	private static String ASS_DESCRIPCIO = "Descripció de l'Assignatura de 5º Curs de l'Enginyeria Informàtica de la Universitat de les Illes Balears.";

@@ -26,13 +26,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class JPAAlumneDaoTests {
 
 	@Autowired
-	private AlumneDao alumneDao;
+	private AlumneRepository alumneDao;
 
 	@Autowired
 	private PersonaDao personaDao;
 
 	@Autowired
-	private AssignaturaDao assignaturaDao;
+	private AssignaturaRepository assignaturaDao;
 
 	private static String ASS_NOM = "Estadística III";
 	private static String ASS_DESCRIPCIO = "Descripció de l'Assignatura de 5è Curs de l'Enginyeria Informàtica de la Universitat de les Illes Balears.";

@@ -27,7 +27,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class JPAAssignaturaDaoTests {
 
 	@Autowired
-	private AssignaturaDao assignaturaDao;
+	private AssignaturaRepository assignaturaDao;
 
 	@Autowired
 	private PersonaDao personaDao;

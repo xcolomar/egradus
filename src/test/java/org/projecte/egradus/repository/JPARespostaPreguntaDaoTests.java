@@ -42,13 +42,13 @@ public class JPARespostaPreguntaDaoTests {
 	private PersonaDao personaDao;
 
 	@Autowired
-	private AssignaturaDao assignaturaDao;
+	private AssignaturaRepository assignaturaDao;
 
 	@Autowired
 	private ProfessorDao professorDao;
 
 	@Autowired
-	private AlumneDao alumneDao;
+	private AlumneRepository alumneDao;
 
 	// Dades de les Persones
 	private static String PRO_NOM = "Aina";

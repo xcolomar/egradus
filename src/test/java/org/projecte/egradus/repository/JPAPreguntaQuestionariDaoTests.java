@@ -33,7 +33,7 @@ public class JPAPreguntaQuestionariDaoTests {
 	private PersonaDao personaDao;
 
 	@Autowired
-	private AssignaturaDao assignaturaDao;
+	private AssignaturaRepository assignaturaDao;
 
 	@Autowired
 	private ProfessorDao professorDao;
