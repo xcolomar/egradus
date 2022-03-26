@@ -32,16 +32,16 @@ import org.springframework.transaction.annotation.Transactional;
 public class JPAPreguntaDaoTests {
 
 	@Autowired
-	private PreguntaDao preguntaDao;
+	private PreguntaRepository preguntaDao;
 
 	@Autowired
-	private PersonaDao personaDao;
+	private PersonaRepository personaDao;
 
 	@Autowired
 	private AssignaturaRepository assignaturaDao;
 
 	@Autowired
-	private ProfessorDao professorDao;
+	private ProfessorRepository professorDao;
 
 	@Autowired
 	private AlumneRepository alumneDao;

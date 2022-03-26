@@ -11,7 +11,7 @@ import org.projecte.egradus.domain.Pregunta;
 import org.projecte.egradus.domain.Professor;
 import org.projecte.egradus.domain.RespostaPregunta;
 import org.projecte.egradus.domain.RespostaQuestionari;
-import org.projecte.egradus.repository.PreguntaDao;
+import org.projecte.egradus.repository.PreguntaRepository;
 import org.projecte.egradus.repository.RespostaPreguntaDao;
 import org.projecte.egradus.service.RespostaPreguntaService;
 import org.projecte.egradus.utilities.Calcul;
@@ -26,7 +26,7 @@ public class RespostaPreguntaServiceImpl implements RespostaPreguntaService {
 	private static final long serialVersionUID = 1L;
 	
 	@Autowired
-	private PreguntaDao preguntaDao;
+	private PreguntaRepository preguntaDao;
 	
 	@Autowired
 	private RespostaPreguntaDao respostaPreguntaDao;

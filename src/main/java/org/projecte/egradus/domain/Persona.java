@@ -14,52 +14,52 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
- * Classe de domini Persona. 
- * Engloba les característiques bàsiques d'una persona.
- * (nom, llinatges, correu, alies intern, etc). 
- * Dins l'aplicatiu, existirà un compte per cada persona,
- * independentment de les assignatures en les què participi.
+ * Classe de domini Persona. Engloba les característiques bàsiques d'una
+ * persona. (nom, llinatges, correu, alies intern, etc). Dins l'aplicatiu,
+ * existirà un compte per cada persona, independentment de les assignatures en
+ * les què participi.
  * 
  * @author Xavier
  *
  */
 @Entity
-@Table(name="t_persona", uniqueConstraints={@UniqueConstraint(name="UK_ALIES", columnNames={"alies"})})
+@Table(name = "t_persona", uniqueConstraints = { @UniqueConstraint(name = "UK_ALIES", columnNames = { "alies" }) })
 public class Persona implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer codi;
-	
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer codi;
+
 	@NotEmpty
-    private String nom;
-	
+	private String nom;
+
 	@NotEmpty
-    private String primerLlinatge;
-	
-    private String segonLlinatge;
-    
-    private String identificador;
-    
-    @Email
-    @NotEmpty
-    private String correu;
-    
-    @NotEmpty
-    private String alies;
-    
-    @NotEmpty
-    private String clau;
-    
-    private Date dataNaixament;
-    
-    private Date dataAlta;
-    
-    // Constructor
-    public Persona(){}
-	
+	private String primerLlinatge;
+
+	private String segonLlinatge;
+
+	private String identificador;
+
+	@Email
+	@NotEmpty
+	private String correu;
+
+	@NotEmpty
+	private String alies;
+
+	@NotEmpty
+	private String clau;
+
+	private Date dataNaixament;
+
+	private Date dataAlta;
+
+	// Constructor
+	public Persona() {
+	}
+
 	public Integer getCodi() {
 		return codi;
 	}
@@ -91,7 +91,7 @@ public class Persona implements Serializable {
 	public void setSegonLlinatge(String segonLlinatge) {
 		this.segonLlinatge = segonLlinatge;
 	}
-	
+
 	public String getIdentificador() {
 		return identificador;
 	}
@@ -141,20 +141,20 @@ public class Persona implements Serializable {
 	}
 
 	public String toString() {
-        StringBuffer buffer = new StringBuffer();
-        buffer.append("  codi: "               + codi);
-        buffer.append(", nom: "                + nom);
-        buffer.append(", primer llinatge: "    + primerLlinatge);
-        buffer.append(", segon llinatge: "     + segonLlinatge);
-        buffer.append(", identificador: "      + identificador);
-        buffer.append(", correu: "             + correu);
-        buffer.append(", àlies: "              + alies);
-        buffer.append(", clau: "               + clau);
-        buffer.append(", data naixament: "     + dataNaixament);
-        buffer.append(", data d'alta: "        + dataAlta);
-        return buffer.toString();
-    }
-	
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("  codi: " + codi);
+		buffer.append(", nom: " + nom);
+		buffer.append(", primer llinatge: " + primerLlinatge);
+		buffer.append(", segon llinatge: " + segonLlinatge);
+		buffer.append(", identificador: " + identificador);
+		buffer.append(", correu: " + correu);
+		buffer.append(", àlies: " + alies);
+		buffer.append(", clau: " + clau);
+		buffer.append(", data naixament: " + dataNaixament);
+		buffer.append(", data d'alta: " + dataAlta);
+		return buffer.toString();
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -162,7 +162,7 @@ public class Persona implements Serializable {
 		result = prime * result + ((codi == null) ? 0 : codi.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -179,5 +179,5 @@ public class Persona implements Serializable {
 			return false;
 		return true;
 	}
-	
+
 }

@@ -44,7 +44,7 @@ public class JPAEstadistiquesDaoTests {
 	private RespostaQuestionariDao respostaQuestionariDao;
 
 	@Autowired
-	private PreguntaDao preguntaDao;
+	private PreguntaRepository preguntaDao;
 
 	@Autowired
 	private QuestionariDao questionariDao;
@@ -53,13 +53,13 @@ public class JPAEstadistiquesDaoTests {
 	private PreguntaQuestionariDao pqDao;
 
 	@Autowired
-	private PersonaDao personaDao;
+	private PersonaRepository personaDao;
 
 	@Autowired
 	private AssignaturaRepository assignaturaDao;
 
 	@Autowired
-	private ProfessorDao professorDao;
+	private ProfessorRepository professorDao;
 
 	@Autowired
 	private AlumneRepository alumneDao;

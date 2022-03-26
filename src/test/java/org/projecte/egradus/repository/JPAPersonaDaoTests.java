@@ -29,7 +29,7 @@ public class JPAPersonaDaoTests {
 	private static String ALIES_TRUE = "alies_true";
 
 	@Autowired
-	private PersonaDao personaDao;
+	private PersonaRepository personaDao;
 
 	@Test
 	public void testGetLlistaPersonaBuit() {

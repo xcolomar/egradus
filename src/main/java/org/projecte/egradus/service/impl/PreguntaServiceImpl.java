@@ -7,7 +7,7 @@ import java.util.List;
 import org.projecte.egradus.domain.Assignatura;
 import org.projecte.egradus.domain.Opcio;
 import org.projecte.egradus.domain.Pregunta;
-import org.projecte.egradus.repository.PreguntaDao;
+import org.projecte.egradus.repository.PreguntaRepository;
 import org.projecte.egradus.repository.RespostaPreguntaDao;
 import org.projecte.egradus.service.PreguntaService;
 import org.projecte.egradus.utilities.Util;
@@ -22,7 +22,7 @@ public class PreguntaServiceImpl implements PreguntaService {
 	private static final long serialVersionUID = 1L;
 	
 	@Autowired (required = true)
-	private PreguntaDao preguntaDao;
+	private PreguntaRepository preguntaDao;
 	
 	@Autowired (required = true)
 	private RespostaPreguntaDao respostaPreguntaDao;

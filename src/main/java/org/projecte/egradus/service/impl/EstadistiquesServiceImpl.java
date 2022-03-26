@@ -14,7 +14,7 @@ import org.projecte.egradus.domain.RespostaPregunta;
 import org.projecte.egradus.domain.RespostaQuestionari;
 import org.projecte.egradus.repository.AssignaturaRepository;
 import org.projecte.egradus.repository.EstadistiquesDao;
-import org.projecte.egradus.repository.PreguntaDao;
+import org.projecte.egradus.repository.PreguntaRepository;
 import org.projecte.egradus.repository.QuestionariDao;
 import org.projecte.egradus.repository.RespostaPreguntaDao;
 import org.projecte.egradus.repository.RespostaQuestionariDao;
@@ -40,7 +40,7 @@ public class EstadistiquesServiceImpl implements EstadistiquesService {
 	RespostaQuestionariDao respostaQuestionariDao;
 	
 	@Autowired
-	PreguntaDao preguntaDao;
+	PreguntaRepository preguntaDao;
 	
 	@Autowired
 	QuestionariDao questionariDao;

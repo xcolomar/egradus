@@ -11,7 +11,7 @@ import org.projecte.egradus.domain.Persona;
 import org.projecte.egradus.domain.Professor;
 import org.projecte.egradus.repository.AlumneRepository;
 import org.projecte.egradus.repository.AssignaturaRepository;
-import org.projecte.egradus.repository.ProfessorDao;
+import org.projecte.egradus.repository.ProfessorRepository;
 import org.projecte.egradus.utilities.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +25,7 @@ public class AssignaturaServiceImpl {
 	private AssignaturaRepository assignaturaRepositori;
 
 	@Autowired
-	private ProfessorDao professorDao;
+	private ProfessorRepository professorDao;
 
 	@Autowired
 	private AlumneRepository alumneRepositori;

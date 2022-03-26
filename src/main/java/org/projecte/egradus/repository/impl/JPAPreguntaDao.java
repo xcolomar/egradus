@@ -9,11 +9,11 @@ import javax.persistence.Query;
 
 import org.projecte.egradus.domain.Opcio;
 import org.projecte.egradus.domain.Pregunta;
-import org.projecte.egradus.repository.PreguntaDao;
+import org.projecte.egradus.repository.PreguntaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository(value = "preguntaDao")
-public class JPAPreguntaDao implements PreguntaDao {
+public class JPAPreguntaDao implements PreguntaRepository {
 	
 	private EntityManager em = null;
 	

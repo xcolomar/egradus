@@ -13,7 +13,7 @@ import org.projecte.egradus.domain.Professor;
 import org.projecte.egradus.domain.Questionari;
 import org.projecte.egradus.domain.RespostaPregunta;
 import org.projecte.egradus.domain.RespostaQuestionari;
-import org.projecte.egradus.repository.PreguntaDao;
+import org.projecte.egradus.repository.PreguntaRepository;
 import org.projecte.egradus.repository.PreguntaQuestionariDao;
 import org.projecte.egradus.repository.QuestionariDao;
 import org.projecte.egradus.repository.RespostaPreguntaDao;
@@ -35,7 +35,7 @@ public class RespostaQuestionariServiceImpl implements RespostaQuestionariServic
 	private QuestionariDao questionariDao;
 	
 	@Autowired
-	private PreguntaDao preguntaDao;
+	private PreguntaRepository preguntaDao;
 	
 	@Autowired
 	private PreguntaQuestionariDao pqDao;

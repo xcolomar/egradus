@@ -29,7 +29,7 @@ public class JPAAlumneDaoTests {
 	private AlumneRepository alumneDao;
 
 	@Autowired
-	private PersonaDao personaDao;
+	private PersonaRepository personaDao;
 
 	@Autowired
 	private AssignaturaRepository assignaturaDao;

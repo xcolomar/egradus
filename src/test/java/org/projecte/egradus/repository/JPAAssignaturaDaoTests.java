@@ -30,7 +30,7 @@ public class JPAAssignaturaDaoTests {
 	private AssignaturaRepository assignaturaDao;
 
 	@Autowired
-	private PersonaDao personaDao;
+	private PersonaRepository personaDao;
 
 	private static String ASS_NOM = "Intel·ligència Artificial";
 	private static String ASS_DESCRIPCIO = "Descripció de l'Assignatura de 4º Curs de l'Enginyeria Informàtica de la Universitat de les Illes Balears.";
